@@ -1,4 +1,4 @@
-require "pause_output/version"
+require_relative "pause_output/version"
 
 module PauseOutput
   class Error < StandardError; end

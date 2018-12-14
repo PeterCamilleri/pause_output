@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "pause_output/version"
@@ -9,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["PeterCamilleri"]
   spec.email         = ["peter.c.camilleri@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Pause lengthy console output.}
+  spec.description   = %q{pause_output: A simple facility to pause output on the console terminal.}
   spec.homepage      = "https://github.com/PeterCamilleri/pause_output"
   spec.license       = "MIT"
 

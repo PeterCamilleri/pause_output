@@ -15,4 +15,10 @@ class PauseOutputTest < Minitest::Test
     assert(/\A\d+\.\d+\.\d+/ =~ ::PauseOutput::VERSION)
   end
 
+  def test_that_it_has_a_description
+    refute_nil(::PauseOutput::DESCRIPTION)
+    assert(::PauseOutput::DESCRIPTION.frozen?)
+    assert(::PauseOutput::DESCRIPTION.is_a?(String))
+  end
+
 end
