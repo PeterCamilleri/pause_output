@@ -21,4 +21,8 @@ class PauseOutputTest < Minitest::Test
     assert(::PauseOutput::DESCRIPTION.is_a?(String))
   end
 
+  def test_that_it_has_an_exception
+    refute_nil(PauseOutputStop)
+  end
+
 end
