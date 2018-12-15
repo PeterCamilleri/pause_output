@@ -65,6 +65,7 @@ module PauseOutput
         when " "
           @lines -= 1
         when "q"
+          @lines = 0
           raise PauseOutputStop
         else
           @lines = 0
