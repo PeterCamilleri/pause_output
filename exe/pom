@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+#
+# The Ruby inspired, ego based, My Shell command line processor.
+#
+
+require_relative '..\lib\pause_output'
+
+MiniTerm.open(quiet: true, strict: true) unless MiniTerm.term_open?
+
+if ARGV[0] == '-h'
+  puts "The paused output more gem demo for version: #{::PauseOutput::VERSION}"
+  exit
+end
+
+ARGV.each do |file_name|
+  more do
+    puts "File: #{file_name}",""
+    puts IO.read(file_name)
+  end
+end
