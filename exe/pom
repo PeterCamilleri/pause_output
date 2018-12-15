@@ -14,7 +14,7 @@ end
 
 more do
   ARGV.each do |file_name|
-    puts "File: #{file_name}"," "
+    puts "**** File: #{file_name} ****"," "
     puts IO.read(file_name), " "
   end
 end
