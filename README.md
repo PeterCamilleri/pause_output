@@ -40,7 +40,28 @@ more do
 end
 ```
 
+#### Options
 
+The following options are available for use in the optional options hash
+parameter of the global Object#more method:
+
+Option      | Values  | Default       | Description
+------------|---------|---------------|----------------
+:page_pause | boolean | true          | Is page pause enabled?
+:page_height| integer | console height| The height of the page.
+:page_width | integer | console width | The width of the page.
+:page_msg   | string  | "Press enter, space or q:" | The paused prompt message.
+
+The default value is used if the option is absent from the hash. Unsupported
+option values are ignored and have no effect.
+
+Notes:
+* Setting page_pause to false can allow a block of code to run without pausing
+at page breaks, if that is desired.
+* If the :page_height and :page_width values are not valid, the default values
+will be used instead.
+* Nesting of "more" blocks is allowed. However, only the options of the outermost
+block are active. The options passed into "inner" blocks are ignored.
 
 ## Contributing
 
