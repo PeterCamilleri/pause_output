@@ -8,7 +8,7 @@ require_relative '..\lib\pause_output'
 MiniTerm.open(quiet: true, strict: true) unless MiniTerm.term_open?
 
 if ARGV[0] == '-h'
-  puts "The paused output more gem demo for version: #{::PauseOutput::VERSION}"
+  puts "The paused output more gem demo. Version: #{::PauseOutput::VERSION}"
   exit
 end
 
