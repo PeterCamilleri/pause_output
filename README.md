@@ -1,6 +1,15 @@
 # PauseOutput
 
-WIP
+The pause_output gem provides a facility like the classic more (or less) utility
+within Ruby programs. This little bit of code started out as a feature of the
+mysh (my shell) program but was spun off as it was felt that this capability
+had use on a larger scale.
+
+Also included is a simple demo program called pom (Pause Output More) This
+simple demo accepts a list of files and displays them, pausing as needed.
+It is as easy to use as this:
+
+    pom README.md
 
 ## Installation
 

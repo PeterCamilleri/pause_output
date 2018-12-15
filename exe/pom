@@ -12,9 +12,9 @@ if ARGV[0] == '-h'
   exit
 end
 
-ARGV.each do |file_name|
-  more do
-    puts "File: #{file_name}",""
-    puts IO.read(file_name)
+more do
+  ARGV.each do |file_name|
+    puts "File: #{file_name}"," "
+    puts IO.read(file_name), " "
   end
 end
