@@ -29,7 +29,18 @@ Or install it yourself as:
 
 ## Usage
 
-WIP
+The pause_output gem works through the more command. This simple command
+accepts optional hash arguments and a block. For example:
+
+```ruby
+more do
+  100.times do |i|
+    puts "#{'%5d' % i}, #{'%6d' % (i*i)}, #{'%8d' % (i*i*i)}"
+  end
+end
+```
+
+
 
 ## Contributing
 
