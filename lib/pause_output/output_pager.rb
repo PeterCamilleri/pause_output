@@ -40,11 +40,11 @@ module PauseOutput
           @chars += len
           return
         else
-          tilt = chars_per_line - @chars
-          $pause_output_out.write(str[0, tilt])
+          tipping_point = chars_per_line - @chars
+          $pause_output_out.write(str[0, tipping_point])
           count_lines
 
-          str = (str[tilt..-1])
+          str = (str[tipping_point..-1])
         end
       end
     end
