@@ -16,7 +16,7 @@ module PauseOutput
 
     # Write out a general string with page pauses.
     def write(str)
-      while !str.empty?
+      until str.empty?
         pre,mid,str = str.partition("\n")
         write_str(pre) unless pre.empty?
         writeln unless mid.empty?
