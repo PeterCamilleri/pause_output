@@ -62,9 +62,9 @@ module PauseOutput
 
       if @lines >= (lines_per_page - 1)
         case pause.downcase
-        when " "
+        when one_line
           @lines -= 1
-        when "q"
+        when skip_all
           @lines = 0
           raise PauseOutputStop
         else
@@ -104,9 +104,18 @@ module PauseOutput
 
     # Get the text of the pause message.
     def pause_message
-      @options.key?(:page_msg) ? @options[:page_msg] : "Press enter, space or q:"
+      @options.key?(:page_msg) ? @options[:page_msg] : "Press space, q or other:"
     end
 
+    # Keystroke to advance one line.
+    def one_line
+      @options.key?(:one_line) ? @options[:one_line] : " "
+    end
+
+    # Keystroke to quit processing.
+    def skip_all
+      @options.key?(:skip_all) ? @options[:skip_all] : "q"
+    end
   end
 
 end
