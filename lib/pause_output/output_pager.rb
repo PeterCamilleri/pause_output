@@ -67,6 +67,8 @@ module PauseOutput
         when skip_all
           @lines = 0
           raise PauseOutputStop
+        when no_pause
+          @lines = -1_000_000
         else
           @lines = 0
         end
@@ -104,7 +106,8 @@ module PauseOutput
 
     # Get the text of the pause message.
     def pause_message
-      @options.key?(:page_msg) ? @options[:page_msg] : "Press space, q or other:"
+      @options.key?(:page_msg) ? @options[:page_msg] :
+        "Press space (line), n (no pause), q(uit) or other (page):"
     end
 
     # Keystroke to advance one line.
@@ -116,6 +119,12 @@ module PauseOutput
     def skip_all
       @options.key?(:skip_all) ? @options[:skip_all] : "q"
     end
+
+    # Keystroke to disable pauses.
+    def no_pause
+      @options.key?(:no_pause) ? @options[:no_pause] : "n"
+    end
+
   end
 
 end
