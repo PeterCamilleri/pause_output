@@ -10,10 +10,10 @@ class Object
     saved = $stdout
     outer = $stdout.equal?($pause_output_out)
 
-    disabled = options[:page_pause]
-    disabled = disabled.downcase if disabled.is_a?(String)
+    enabled = options[:page_pause]
+    enabled = enabled.downcase if enabled.is_a?(String)
 
-    unless [false, 'false', 'off', 'no'].include?(disabled)
+    unless [false, 'false', 'off', 'no'].include?(enabled)
       $stdout = ::PauseOutput::OutputPager.new(options) if outer
     end
 
