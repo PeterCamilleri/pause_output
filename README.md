@@ -50,7 +50,10 @@ Option      | Values  | Default       | Description
 :page_pause | boolean | true          | Is page pause enabled?
 :page_height| integer | console height| The height of the page.
 :page_width | integer | console width | The width of the page.
-:page_msg   | string  | "Press enter, space or q:" | The paused prompt message.
+:page_msg   | string  | "Press space (line), n (no pause), q(uit) or other (page):" | The paused prompt message.
+:one_line   | string  | " "           | The key to progress by one line.
+:skip_all   | string  | "q"           | The key to skip the rest of the output.
+:no_pause   | string  | "n"           | The key to display the rest with no pauses.
 
 The default value is used if the option is absent from the hash. Unsupported
 option values are ignored and have no effect.
